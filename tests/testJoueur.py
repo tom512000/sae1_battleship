@@ -18,7 +18,7 @@ class TestJoueurMethods(unittest.TestCase):
     def test_construire_joueur(self):
         j = ["Machin", [], "truc"]
         self.assertFalse(type_joueur(j))
-        j = construireJoueur("Moi", const.BATEAUX_CASES.keys())
+        j = construireJoueur("Moi", list(const.BATEAUX_CASES.keys()))
         self.assertTrue(type_joueur(j))
 
     @unittest.skipIf("construireJoueur" not in globals() or "getNomJoueur" not in globals(),

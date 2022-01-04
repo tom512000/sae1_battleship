@@ -1,8 +1,9 @@
 # model/Segment.py
 
-from model.Coordonnees import type_coordonnees
-from model.Etat import type_etat_segment
+from model.Coordonnees import *
+from model.Etat import *
 from model.Constantes import *
+
 
 #
 # définit un segment de bateau :
@@ -27,3 +28,12 @@ def type_segment(objet: dict) -> bool:
            and type_etat_segment(objet[const.SEGMENT_ETAT])
 
 
+def construireSegment(coord: tuple = None) -> dict:
+    if (type_coordonnees(coord) == True):
+        Segment = {coord: const.INTACT}
+    else:
+        raise ValueError(f"construireSegment: le paramètre {coord} ne correspond pas à des coordonnées")
+    return Segment
+
+
+print(construireSegment((1, 2)))
