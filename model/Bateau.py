@@ -56,3 +56,13 @@ def construireBateau(nbat: str) -> dict:
     else:
         raise ValueError(f"construireBateau: le paramètre {nbat} ne correspond pas à un nom de bateau")
     return bateau
+
+
+def getNomBateau(bat: dict) -> str:
+    if (type_bateau(bat) == True):
+        ttb = bat[const.BATEAU_NOM]
+    else:
+        raise ValueError(f"getNomBateau: le paramètre {bat} ne correspond pas à un bateau")
+    return ttb
+
+
