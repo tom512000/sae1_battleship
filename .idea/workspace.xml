@@ -123,9 +123,9 @@
       <list>
         <item itemvalue="Python tests.Python tests in testBateau.py" />
         <item itemvalue="Python.Bateau" />
+        <item itemvalue="Python.tests" />
         <item itemvalue="Python tests.Python tests in testSegment.py" />
         <item itemvalue="Python.Segment" />
-        <item itemvalue="Python.tests" />
       </list>
     </recent_temporary>
   </component>
