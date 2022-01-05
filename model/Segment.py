@@ -51,3 +51,13 @@ def getEtatSegment(etaseg: dict) -> tuple:
         raise ValueError(f"getEtatSegment: le paramètre {etaseg} n'est pas de type Segment")
     return etat
 
+
+def setCoordonneesSegment(dictio: dict, coordonnees: tuple):
+    if (type_segment(dictio) == True):
+        if (type_coordonnees(coordonnees) == True):
+            dictio[const.SEGMENT_COORDONNEES] = coordonnees
+        else:
+            raise ValueError(f"setCoordonneesSegment: le paramètre {coordonnees} ne correspond pas à des coordonnées")
+    else:
+        raise ValueError(f"setCoordonneesSegment: le paramètre {dictio} n'est pas de type Segment")
+    return None
