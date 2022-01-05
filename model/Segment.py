@@ -29,11 +29,16 @@ def type_segment(objet: dict) -> bool:
 
 
 def construireSegment(coord: tuple = None) -> dict:
-    if (type_coordonnees(coord) == True):
-        Segment = {coord: const.INTACT}
+    if type_coordonnees(coord) == True:
+        seg = {const.SEGMENT_COORDONNEES: coord, const.SEGMENT_ETAT: const.INTACT}
     else:
         raise ValueError(f"construireSegment: le paramètre {coord} ne correspond pas à des coordonnées")
-    return Segment
+    return seg
 
 
-print(construireSegment((1, 2)))
+def getCoordonneesSegment(typseg: dict) -> tuple:
+    if (type_segment(typseg) == True):
+        coo = typseg[const.SEGMENT_COORDONNEES]
+    else:
+        raise ValueError(f"getCoordonneesSegment: le paramètre {typseg} n'est pas de type Segment")
+    return coo
