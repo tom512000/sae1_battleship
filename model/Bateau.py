@@ -59,10 +59,24 @@ def construireBateau(nbat: str) -> dict:
 
 
 def getNomBateau(bat: dict) -> str:
-    if (type_bateau(bat) == True):
+    if type_bateau(bat) == True:
         ttb = bat[const.BATEAU_NOM]
     else:
         raise ValueError(f"getNomBateau: le paramètre {bat} ne correspond pas à un bateau")
     return ttb
 
 
+def getTailleBateau(bato: dict) -> int:
+    if (type_bateau(bato) == True):
+        tba = len(bato[const.BATEAU_SEGMENTS])
+    else:
+        raise ValueError(f"getTailleBateau: le paramètre {bato} ne correspond pas à un bateau")
+    return tba
+
+
+def getSegmentsBateau(bateau: dict) -> lst:
+    if (type_bateau(bateau) == True):
+        
+    else:
+        raise ValueError(f"getTailleBateau: le paramètre {bateau} ne correspond pas à un bateau")
+    return tba
