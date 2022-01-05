@@ -8,7 +8,7 @@
 #   La taille du bateau n'est pas stockée car elle correspond à la taille de la liste des listes [coordonnées, état]
 #
 
-from model.Segment import type_segment
+from model.Segment import *
 from model.Constantes import *
 
 
@@ -48,3 +48,11 @@ def est_horizontal_bateau(bateau: dict) -> bool:
             if (res and pos[0][0] != pos[i][0]) or (not res and pos[0][1] != pos[i][1]):
                 raise ValueError("est_horizontal_bateau: Le bateau n'est ni horizontal, ni vertical ??")
     return res
+
+
+def construireBateau(nbat: str) -> dict:
+    if nbat in const.BATEAUX_CASES:
+        bateau = {const.BATEAU_NOM: nbat, const.BATEAU_SEGMENTS: const.BATEAUX_CASES[nbat] * [construireSegment()]}
+    else:
+        raise ValueError(f"construireBateau: le paramètre {nbat} ne correspond pas à un nom de bateau")
+    return bateau
