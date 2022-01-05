@@ -61,3 +61,14 @@ def setCoordonneesSegment(dictio: dict, coordonnees: tuple):
     else:
         raise ValueError(f"setCoordonneesSegment: le paramètre {dictio} n'est pas de type Segment")
     return None
+
+
+def setEtatSegment(dictionnaire: dict, cdc: str):
+    if (type_segment(dictionnaire) == True):
+        if (type_etat_segment(cdc) == True):
+            dictionnaire[const.SEGMENT_ETAT] = cdc
+        else:
+            raise ValueError(f"setEtatSegment: le paramètre {cdc} ne correspond pas à un état")
+    else:
+        raise ValueError(f"setEtatSegment: le paramètre {dictionnaire} n'est pas de type Segment")
+    return None
