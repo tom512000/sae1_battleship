@@ -76,7 +76,7 @@ def getTailleBateau(bato: dict) -> int:
 
 def getSegmentsBateau(bateau: dict) -> lst:
     if (type_bateau(bateau) == True):
-        
+
     else:
         raise ValueError(f"getTailleBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return tba
