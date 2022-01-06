@@ -1,7 +1,7 @@
 # Joueur.py
 
-from model.Bateau import type_bateau
-from model.Grille import type_grille
+from model.Bateau import *
+from model.Grille import *
 from model.Constantes import *
 
 #

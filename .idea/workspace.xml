@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Bateau.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Bateau.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Grille.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Grille.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Joueur.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Joueur.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +29,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in testBateau.py">
-    <configuration name="Bateau" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.tests">
+    <configuration name="Grille" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SAE1_BattleShip" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -41,7 +42,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/Bateau.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/Grille.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +86,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in testSegment.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in testGrille.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="SAE1_BattleShip" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,7 +96,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/testSegment.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/testGrille.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -115,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in testBateau.py" />
         <item itemvalue="Python.tests" />
+        <item itemvalue="Python tests.Python tests in testGrille.py" />
+        <item itemvalue="Python.Grille" />
+        <item itemvalue="Python tests.Python tests in testBateau.py" />
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python.Bateau" />
-        <item itemvalue="Python tests.Python tests in testSegment.py" />
       </list>
     </recent_temporary>
   </component>
