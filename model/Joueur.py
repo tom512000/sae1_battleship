@@ -41,3 +41,11 @@ def construireJoueur(nom: str, nombat: list) -> dict:
               const.JOUEUR_GRILLE_ADVERSAIRE: adversgr}
 
     return joueur
+
+
+def getNomJoueur(joueur: dict) -> str:
+    if type_joueur(joueur) == True:
+        nomjoueur = joueur[const.JOUEUR_NOM]
+    else:
+        raise ValueError(f"getNomJoueur: le paramètre {joueur} ne correspond pas à un joueur")
+    return nomjoueur
