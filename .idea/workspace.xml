@@ -4,6 +4,7 @@
     <list default="true" id="e6fcbd3c-cc0b-4f63-a15e-5d11df3d38c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/Bateau.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Bateau.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testBateau.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testBateau.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in testBateau.py" />
         <item itemvalue="Python.tests" />
+        <item itemvalue="Python tests.Python tests in testBateau.py" />
         <item itemvalue="Python tests.Python tests in testJoueur.py" />
         <item itemvalue="Python tests.Python tests in testGrille.py" />
         <item itemvalue="Python.Grille" />

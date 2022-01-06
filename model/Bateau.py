@@ -163,4 +163,21 @@ def estPlaceBateau(bateau: dict) -> bool:
             res = True
     else:
         raise ValueError(f"estPlaceBateau: le paramètre {bateau} ne correspond pas à un bateau")
-    return
+    return res
+
+"""
+def sontVoisinsBateau(bateau1: dict, bateau2: dict):
+    if (type_bateau(bateau1) == True) and (type_bateau(bateau2) == True):
+        test1 = getCoordonneesSegment(bateau1)
+        test2 = getCoordonneesSegment(bateau2)
+        for i in range(test1):
+            for j in range(test2):
+                if sontVoisins(i, j) == True:
+                    res = True
+                else:
+                    res = False
+    else:
+        raise ValueError(f"sontVoisinsBateau: les paramètres {bateau1} ou {bateau2} ne correspond pas à un bateau")
+    return res
+"""
+

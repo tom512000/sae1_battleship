@@ -257,7 +257,7 @@ class TestBateauMethods(unittest.TestCase):
         for nom in const.BATEAUX_CASES:
             b = construireBateau(nom)
             placerBateau(b, (1, 1), True)
-            pos = [ (1, 1 + i) for i in range(getTailleBateau(b))]
+            pos = [(1, 1 + i) for i in range(getTailleBateau(b))]
             for i in range(100):
                 p = (randint(0, const.DIM - 1), randint(0, const.DIM - 1))
                 self.assertEqual(p in pos, contientSegmentBateau(b, p),
