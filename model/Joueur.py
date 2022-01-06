@@ -81,3 +81,25 @@ def getGrilleTirsAdversaire(joueur: dict) -> list:
     else:
         raise ValueError(f"getGrilleTirsAdversaire: le paramètre {joueur} ne correspond pas à un joueur")
     return grtirsadvers
+
+"""
+def placerBateauJoueur(joueur: dict, bateau: dict, coord: tuple, position: bool) -> bool:
+    if type_joueur(joueur) == True:
+        if type_bateau(bateau) == True:
+            if type_coordonnees(coord) == True:
+                if bateau not in getBateauxJoueur(joueur):
+                    raise RuntimeError(f"placerBateauJoueur: le paramètre {bateau} n'appartient pas au joueur {joueur}")
+                else:
+                    test = peutPlacerBateau(bateau, coord, position)
+                    if test == True:
+                        res = True
+                    elif test == False:
+                        res = True
+            else:
+                raise ValueError(f"placerBateauJoueur: le paramètre {coord} ne correspond pas à des coordonnées")
+        else:
+            raise ValueError(f"placerBateauJoueur: le paramètre {bateau} ne correspond pas à un bateau")
+    else:
+        raise ValueError(f"placerBateauJoueur: le paramètre {joueur} ne correspond pas à un joueur")
+    return res
+"""
