@@ -101,7 +101,7 @@ def getSegmentBateau(babato: dict, numseg: object) -> list:
         raise ValueError(f"getTailleBateau: le paramètre {babato} ne correspond pas à un bateau")
     return test
 
-"""
+
 def setSegmentBateau(bateau: dict, numseg: int, segment: dict):
     if (type_bateau(bateau) == True):
         if (numseg >= 0) and (numseg <= len(getSegmentsBateau(bateau)) - 1):
@@ -117,5 +117,5 @@ def setSegmentBateau(bateau: dict, numseg: int, segment: dict):
     else:
         raise ValueError(f"setSegmentBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return None
-"""
+
 
