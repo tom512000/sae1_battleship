@@ -29,3 +29,15 @@ def type_joueur(joueur: dict) -> bool:
         and all(type_bateau(v) for v in joueur[const.JOUEUR_LISTE_BATEAUX])
 
 
+def construireJoueur(nom: str, nombat: list) -> dict:
+    joueurbat = []
+    for i in range(len(nombat)):
+        joueurbat = joueurbat + [construireBateau(nombat[i])]
+    joueurgr = construireGrille()
+    adversgr = construireGrille()
+    joueur = {const.JOUEUR_NOM: nom,
+              const.JOUEUR_LISTE_BATEAUX: joueurbat,
+              const.JOUEUR_GRILLE_TIRS: joueurgr,
+              const.JOUEUR_GRILLE_ADVERSAIRE: adversgr}
+
+    return joueur
