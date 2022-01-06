@@ -180,4 +180,17 @@ def sontVoisinsBateau(bateau1: dict, bateau2: dict):
         raise ValueError(f"sontVoisinsBateau: les paramètres {bateau1} ou {bateau2} ne correspond pas à un bateau")
     return res
 """
-
+"""
+def placerBateau(bateau: dict, coord: tuple, position: bool) -> :
+    if type_bateau(bateau) == True:
+        if type_coordonnees(coord) == True:
+            if peutPlacerBateau(bateau, coord, position) == True:
+                ???
+            elif peutPlacerBateau(bateau, coord, position) == False:
+                raise RuntimeError(f"placerBateau: la fonction {peutPlacerBateau} est égale à False")
+        else:
+            raise ValueError(f"placerBateau: le paramètre {coord} ne correspond pas à des coordonnées")
+    else:
+        raise ValueError(f"placerBateau: le paramètre {bateau} ne correspond pas à un bateau")
+    return
+"""
