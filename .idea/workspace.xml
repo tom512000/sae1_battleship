@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e6fcbd3c-cc0b-4f63-a15e-5d11df3d38c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Joueur.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Joueur.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Bateau.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Bateau.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Grille.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Grille.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in testJoueur.py" />
         <item itemvalue="Python.tests" />
+        <item itemvalue="Python tests.Python tests in testJoueur.py" />
         <item itemvalue="Python tests.Python tests in testGrille.py" />
         <item itemvalue="Python.Grille" />
         <item itemvalue="Python tests.Python tests in testBateau.py" />

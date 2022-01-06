@@ -128,3 +128,30 @@ def getCoordoneesBateau(bateau: dict) -> list:
     else:
         raise ValueError(f"getCoordoneesBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return listeseg
+
+"""
+def peutPlacerBateau(bateau: dict, first_case: tuple, position: bool) -> bool:
+    if type_bateau(bateau) == True:
+        if type_coordonnees(first_case) == True:
+            if first_case is not None:
+                if position == True: #est horizontal
+                    for coord in getSegmentsBateau(bateau):
+                        if (coord > const.DIM) and (coord < 0):
+                            res = False
+                        else:
+                            res = True
+                if position == False: #est vertical
+                    for coord in getSegmentsBateau(bateau):
+                        if (coord > const.DIM) and (coord < 0):
+                            res = False
+                        else:
+                            res = True
+            else:
+                raise ValueError(f"peutPlacerBateau: le paramètre {coord} est égal à None")
+        else:
+            raise ValueError(f"peutPlacerBateau: le paramètre {coord} ne correspond pas à des coordonnées")
+    else:
+        raise ValueError(f"peutPlacerBateau: le paramètre {bateau} ne correspond pas à un bateau")
+    return res
+"""
+
