@@ -49,3 +49,13 @@ def getNomJoueur(joueur: dict) -> str:
     else:
         raise ValueError(f"getNomJoueur: le paramètre {joueur} ne correspond pas à un joueur")
     return nomjoueur
+
+
+def getNombreBateauxJoueur(joueur: dict) -> list:
+    if type_joueur(joueur) == True:
+        listebatjoueur = len(joueur[const.JOUEUR_LISTE_BATEAUX])
+    else:
+        raise ValueError(f"getNombreBateauxJoueur: le paramètre {joueur} ne correspond pas à un joueur")
+    return listebatjoueur
+
+
