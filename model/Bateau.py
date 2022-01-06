@@ -154,4 +154,3 @@ def peutPlacerBateau(bateau: dict, first_case: tuple, position: bool) -> bool:
         raise ValueError(f"peutPlacerBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return res
 """
-

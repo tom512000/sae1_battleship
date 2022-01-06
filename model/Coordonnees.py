@@ -22,3 +22,18 @@ def type_coordonnees(c: tuple) -> bool:
     return c is None or (type(c) == tuple and len(c) == 2 and 0 <= c[0] < const.DIM and 0 <= c[1] < const.DIM)
 
 
+def sontVoisins(coord1: tuple, coord2: tuple) -> bool:
+    vraimentvoisin = False
+    if not type_coordonnees(coord1) or coord1 is None:
+        raise ValueError(f"sontVoisins : Le paramètre {coord1} ne correspond pas à des coordonnées")
+    if not type_coordonnees(coord2) or coord2 is None:
+        raise ValueError(f"sontVoisins : Le paramètre {coord2} n'est pas valide")
+    for x in range(-1, 2, 1):
+        for y in range(-1, 2, 1):
+            test = (coord1[0] + x, coord1[1] + y)
+            if test != coord1:
+                if test == coord2:
+                    vraimentvoisin = True
+    return vraimentvoisin
+
+
