@@ -65,3 +65,19 @@ def getBateauxJoueur(joueur: dict) -> list:
     else:
         raise ValueError(f"getBateauxJoueur: le paramètre {joueur} ne correspond pas à un joueur")
     return listebatjoueur
+
+
+def getGrilleTirsJoueur(joueur: dict) -> list:
+    if type_joueur(joueur) == True:
+        grtirsjoueur = joueur[const.JOUEUR_GRILLE_TIRS]
+    else:
+        raise ValueError(f"getGrilleTirsJoueur: le paramètre {joueur} ne correspond pas à un joueur")
+    return grtirsjoueur
+
+
+def getGrilleTirsAdversaire(joueur: dict) -> list:
+    if type_joueur(joueur) == True:
+        grtirsadvers = joueur[const.JOUEUR_GRILLE_ADVERSAIRE]
+    else:
+        raise ValueError(f"getGrilleTirsAdversaire: le paramètre {joueur} ne correspond pas à un joueur")
+    return grtirsadvers
