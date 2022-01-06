@@ -8,15 +8,15 @@ import pygame
 from view import window
 
 from model.Constantes import *
-from model.Joueur import construireJoueur
+from model.Joueur import *
 
 def main_test():
     j = construireJoueur("Test", [const.PORTE_AVION, const.CUIRASSE, const.CROISEUR, const.TORPILLEUR])
     # j = construireJoueur("Test", [const.PORTE_AVION, const.CUIRASSE])
-    window.afficher(j)
-    window.placer_bateaux()
-    window.set_action("Pour terminer, cliquez dans la grille de DROITE")
-    window.get_clicked_cell(2)
+    view.window.afficher(j)
+    view.window.placer_bateaux()
+    view.window.set_action("Pour terminer, cliquez dans la grille de DROITE")
+    view.window.get_clicked_cell(2)
 
 
 # Press the green button in the gutter to run the script.
