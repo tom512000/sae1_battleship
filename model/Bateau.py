@@ -119,3 +119,4 @@ def setSegmentBateau(bateau: dict, numseg: int, segment: dict):
     return None
 
 
+def 
