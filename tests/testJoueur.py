@@ -112,12 +112,12 @@ class TestJoueurMethods(unittest.TestCase):
                      "La fonction reinitialiserBateauxJoueur n'est pas écrite")
     def test_reinitialiserBateauxJoueur(self):
         # On teste avec une flotte simple
-        noms = [ const.PORTE_AVION, const.CUIRASSE, const.TORPILLEUR]
+        noms = [const.PORTE_AVION, const.CUIRASSE, const.TORPILLEUR]
         j = construireJoueur("Test", noms)
         lst_bateaux = getBateauxJoueur(j)
         # Placement des bateaux
-        for li in range(len(lst_bateaux)):
-            placerBateauJoueur(j, lst_bateaux[li], (2*li, 0), True)
+        "for li in range(len(lst_bateaux)):"
+        'placerBateauJoueur(j, lst_bateaux[li], (2*li, 0), True)'
         reinitialiserBateauxJoueur(j)
         # On permet que les bateaux soient réalloués
         lst_bateaux = getBateauxJoueur(j)

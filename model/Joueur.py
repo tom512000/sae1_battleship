@@ -103,3 +103,12 @@ def placerBateauJoueur(joueur: dict, bateau: dict, coord: tuple, position: bool)
         raise ValueError(f"placerBateauJoueur: le paramètre {joueur} ne correspond pas à un joueur")
     return res
 """
+
+
+def reinitialiserBateauxJoueur(joueur: dict):
+    if type_joueur(joueur) == True:
+        for test in getBateauxJoueur(joueur):
+            reinitialiserBateau(test)
+    else:
+        raise ValueError(f"reinitialiserBateauxJoueur: le paramètre {joueur} ne correspond pas à un joueur")
+    return None
