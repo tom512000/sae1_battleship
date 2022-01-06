@@ -27,7 +27,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
+  <component name="RunManager" selected="Python tests.Python tests in testBateau.py">
     <configuration name="Bateau" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SAE1_BattleShip" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,9 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests in testBateau.py" />
         <item itemvalue="Python.tests" />
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python.Bateau" />
         <item itemvalue="Python tests.Python tests in testSegment.py" />
       </list>

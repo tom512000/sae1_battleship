@@ -81,3 +81,21 @@ def getSegmentsBateau(bateau: dict) -> list:
         raise ValueError(f"getTailleBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return sba
 
+
+def getSegmentBateau(babato: dict, numseg: object) -> list:
+    if (type_bateau(babato) == True):
+        if type(numseg) == int :
+            bot = getSegmentsBateau(babato)
+            for i in range(len(test)):
+                if numseg == i :
+                    test = bot[i]
+        elif type(numseg) == tuple:
+            test = numseg[const.BATEAU_SEGMENTS]
+        else:
+            raise ValueError(f"Le type du second paramètre {type(numseg)} ne correspond ni à un nombre entier, ni à un tuple")
+    else:
+        raise ValueError(f"getTailleBateau: le paramètre {babato} ne correspond pas à un bateau")
+    return test
+
+
+def setSegmentBateau(bateau: dict, numseg: int, segment: dict) ->
