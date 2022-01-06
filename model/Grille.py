@@ -33,3 +33,4 @@ def type_grille(g: list) -> bool:
     return res
 
 
+def construireGrille()

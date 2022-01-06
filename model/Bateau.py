@@ -121,8 +121,10 @@ def setSegmentBateau(bateau: dict, numseg: int, segment: dict):
 
 def getCoordoneesBateau(bateau: dict) -> list:
     if type_bateau(bateau) == True:
-        listeseg = getCoordonneesSegment(bateau)
+        listeseg = []
+        for i in range(getTailleBateau(bateau)):
+            segment = getSegmentBateau(bateau, i)
+            listeseg.append(segment[const.SEGMENT_COORDONNEES])
     else:
         raise ValueError(f"getCoordoneesBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return listeseg
-
