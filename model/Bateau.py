@@ -12,7 +12,6 @@ from model.Segment import *
 from model.Constantes import *
 
 
-
 def type_bateau(bateau: dict) -> bool:
     """
     Détermine si la liste représente un bateau
@@ -21,11 +20,11 @@ def type_bateau(bateau: dict) -> bool:
     :return: <code>True</code> si la liste contient bien un bateau, <code>False</code> sinon.
     """
     return type(bateau) == dict and \
-        all([v in bateau for v in [const.BATEAU_NOM, const.BATEAU_SEGMENTS]]) and \
-        type(bateau[const.BATEAU_NOM]) == str and \
-        bateau[const.BATEAU_NOM] in const.BATEAUX_CASES and type(bateau[const.BATEAU_SEGMENTS]) == list and \
-        len(bateau[const.BATEAU_SEGMENTS]) == const.BATEAUX_CASES[bateau[const.BATEAU_NOM]] and \
-        all([type_segment(s) for s in bateau[const.BATEAU_SEGMENTS]])
+           all([v in bateau for v in [const.BATEAU_NOM, const.BATEAU_SEGMENTS]]) and \
+           type(bateau[const.BATEAU_NOM]) == str and \
+           bateau[const.BATEAU_NOM] in const.BATEAUX_CASES and type(bateau[const.BATEAU_SEGMENTS]) == list and \
+           len(bateau[const.BATEAU_SEGMENTS]) == const.BATEAUX_CASES[bateau[const.BATEAU_NOM]] and \
+           all([type_segment(s) for s in bateau[const.BATEAU_SEGMENTS]])
 
 
 def est_horizontal_bateau(bateau: dict) -> bool:
@@ -101,6 +100,7 @@ def getSegmentBateau(babato: dict, numseg: object) -> list:
         raise ValueError(f"getTailleBateau: le paramètre {babato} ne correspond pas à un bateau")
     return test
 
+
 """
 def setSegmentBateau(bateau: dict, numseg: int, segment: dict):
     if (type_bateau(bateau) == True):
@@ -119,6 +119,7 @@ def setSegmentBateau(bateau: dict, numseg: int, segment: dict):
     return None
 """
 
+
 def getCoordoneesBateau(bateau: dict) -> list:
     if type_bateau(bateau) == True:
         listeseg = []
@@ -128,6 +129,7 @@ def getCoordoneesBateau(bateau: dict) -> list:
     else:
         raise ValueError(f"getCoordoneesBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return listeseg
+
 
 """
 def peutPlacerBateau(bateau: dict, first_case: tuple, position: bool) -> bool:
@@ -155,6 +157,7 @@ def peutPlacerBateau(bateau: dict, first_case: tuple, position: bool) -> bool:
     return res
 """
 
+
 def estPlaceBateau(bateau: dict) -> bool:
     if type_bateau(bateau) == True:
         if None in bateau[const.BATEAU_SEGMENTS]:
@@ -164,6 +167,7 @@ def estPlaceBateau(bateau: dict) -> bool:
     else:
         raise ValueError(f"estPlaceBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return res
+
 
 """
 def sontVoisinsBateau(bateau1: dict, bateau2: dict):
@@ -193,3 +197,10 @@ def placerBateau(bateau: dict, coord: tuple, position: bool) -> :
     return test
 """
 
+
+def reinitialiserBateau(bateau: dict):
+    for test1 in getSegmentsBateau(bateau):
+        test1[const.SEGMENT_COORDONNEES] = None
+    for test2 in getSegmentsBateau(bateau):
+        test2[const.SEGMENT_ETAT] = const.INTACT
+    return None

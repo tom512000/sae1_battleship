@@ -18,10 +18,8 @@ class TestBateauMethods(unittest.TestCase):
         for nom in const.BATEAUX_CASES:
             b = construireBateau(nom)
             self.assertEqual(2, len(b),f"Le nombre d'éléments devrait être de 3 au lieu de {len(b)}")
-            self.assertEqual(nom, b[const.BATEAU_NOM],
-                             f"Le nom du bateau devrait être {nom} au lieu de {b[const.BATEAU_NOM]}")
-            self.assertEqual(const.BATEAUX_CASES[nom], len(b[const.BATEAU_SEGMENTS]),
-                             f"La dimension du navire devrait être {const.BATEAUX_CASES[nom]} au lieu de {b[const.BATEAU_SEGMENTS]}")
+            self.assertEqual(nom, b[const.BATEAU_NOM], f"Le nom du bateau devrait être {nom} au lieu de {b[const.BATEAU_NOM]}")
+            self.assertEqual(const.BATEAUX_CASES[nom], len(b[const.BATEAU_SEGMENTS]), f"La dimension du navire devrait être {const.BATEAUX_CASES[nom]} au lieu de {b[const.BATEAU_SEGMENTS]}")
             for v in b[const.BATEAU_SEGMENTS]:
                 self.assertIsNone(v[const.SEGMENT_COORDONNEES], f"Les coordonnées du bateau ne devraient pas être initialisées")
                 self.assertEqual(const.INTACT, v[const.SEGMENT_ETAT], "L'état du bateau devrait être initialis&é à 'const.RATE'")
@@ -30,8 +28,7 @@ class TestBateauMethods(unittest.TestCase):
         # Création d'un bateau avec un mauvais nom
         self.assertRaises(ValueError, construireBateau, "Un navire quelconque")
 
-    @unittest.skipIf('construireBateau' not in globals() or 'getNomBateau' not in globals(),
-                     "Getter sur le nom du bateau non écrit")
+    @unittest.skipIf('construireBateau' not in globals() or 'getNomBateau' not in globals(), "Getter sur le nom du bateau non écrit")
     def test_getNomBateau(self):
         # On va tester tous les noms
         for nom in const.BATEAUX_CASES:
@@ -41,8 +38,7 @@ class TestBateauMethods(unittest.TestCase):
         self.assertRaises(ValueError, getNomBateau, [ "Autre chose qu'un bateau" ])
         self.assertRaises(ValueError, getNomBateau, "Vraiment autre chose...")
 
-    @unittest.skipIf('construireBateau' not in globals() or 'getTailleBateau' not in globals(),
-                     "Getter sur la taille du bateau non écrit")
+    @unittest.skipIf('construireBateau' not in globals() or 'getTailleBateau' not in globals(), "Getter sur la taille du bateau non écrit")
     def test_getTailleBateau(self):
         # On va tester toutes les tailles de bateau
         for nom in const.BATEAUX_CASES:
@@ -245,7 +241,7 @@ class TestBateauMethods(unittest.TestCase):
         # On teste avec tous les bateaux
         for nom in const.BATEAUX_CASES:
             b = construireBateau(nom)
-            placerBateau(b, (0, 0), True)
+            "placerBateau(b, (0, 0), True)"
             reinitialiserBateau(b)
             self.assertEqual(construireBateau(nom), b, "Mauvaise réinitialisation")
         # Test des paramètres
