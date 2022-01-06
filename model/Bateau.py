@@ -78,24 +78,44 @@ def getSegmentsBateau(bateau: dict) -> list:
     if (type_bateau(bateau) == True):
         sba = bateau[const.BATEAU_SEGMENTS]
     else:
-        raise ValueError(f"getTailleBateau: le paramètre {bateau} ne correspond pas à un bateau")
+        raise ValueError(f"getSegmentsBateau: le paramètre {bateau} ne correspond pas à un bateau")
     return sba
 
 
 def getSegmentBateau(babato: dict, numseg: object) -> list:
     if (type_bateau(babato) == True):
-        if type(numseg) == int :
-            bot = getSegmentsBateau(babato)
-            for i in range(len(test)):
-                if numseg == i :
-                    test = bot[i]
+        if type(numseg) == int:
+            if (numseg < 0) and (numseg > len(babato[const.BATEAU_SEGMENTS]) - 1):
+                test = babato[const.BATEAU_SEGMENTS][numseg]
         elif type(numseg) == tuple:
-            test = numseg[const.BATEAU_SEGMENTS]
+            bl = False
+            for i in babato[const.BATEAU_SEGMENTS]:
+                if i[const.SEGMENT_COORDONNEES] == numseg:
+                    bl = True
+                    test = i
+            if bl == False:
+                raise ValueError(f"La variable {bl} est encore à False")
         else:
-            raise ValueError(f"Le type du second paramètre {type(numseg)} ne correspond ni à un nombre entier, ni à un tuple")
+            raise ValueError(f"Le type du second paramètre {type(numseg)} n'est ni un nombre entier ni un tuple")
     else:
         raise ValueError(f"getTailleBateau: le paramètre {babato} ne correspond pas à un bateau")
     return test
 
+"""
+def setSegmentBateau(bateau: dict, numseg: int, segment: dict):
+    if (type_bateau(bateau) == True):
+        if (numseg >= 0) and (numseg <= len(getSegmentsBateau(bateau)) - 1):
+            if (type_segment(segment) == True):
+                pip = getSegmentsBateau(bateau)
+                for i in range(len(pip)):
+                    if numseg == i:
+                        pip[i] = segment
+            else:
+                raise ValueError(f"setSegmentBateau: le paramètre {segment} n'est pas de type Segment")
+        else:
+            raise ValueError(f"Le second paramètre {numseg} n'est pas entre 0 et la taille du bateau -1")
+    else:
+        raise ValueError(f"setSegmentBateau: le paramètre {bateau} ne correspond pas à un bateau")
+    return None
+"""
 
-def setSegmentBateau(bateau: dict, numseg: int, segment: dict) ->
